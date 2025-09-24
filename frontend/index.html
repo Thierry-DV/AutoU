@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Emails - AutoU</title>
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Analisador Inteligente de Emails</h1>
+            <p>Cole o texto de um email abaixo ou faça o upload de um arquivo (.txt ou .pdf).</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <label for="file-input">Carregar arquivo:</label>
+                <input type="file" id="file-input" accept=".txt,.pdf">
+            </div>
+
+            <textarea id="email-input" placeholder="O conteúdo do arquivo aparecerá aqui..."></textarea>
+            <button id="analyze-btn">Analisar Email</button>
+
+            <div id="loader" class="hidden"></div>
+
+            <div id="result-container" class="hidden">
+                <h2>Resultado da Análise</h2>
+                <div class="result-item">
+                    <h3>Categoria</h3>
+                    <p id="result-category"></p>
+                </div>
+                <div class="result-item">
+                    <h3>Resposta Sugerida</h3>
+                    <p id="result-suggestion"></p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/pdfjs-dist@3.9.179/build/pdf.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://unpkg.com/pdfjs-dist@3.9.179/build/pdf.worker.min.js';
+    </script>
+    
+    <script src="Scripts/script.js"></script>
+</body>
+</html>
