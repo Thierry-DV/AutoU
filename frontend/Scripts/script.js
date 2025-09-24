@@ -7,7 +7,7 @@ const resultSuggestion = document.getElementById('result-suggestion');
 
 const fileInput = document.getElementById('file-input');
 
-const backendUrl = 'http://127.0.0.1:8000/processar-email';
+const backendUrl = 'https://autou-backend-qej7.onrender.com/processar-email';
 
 fileInput.addEventListener('change', (event) => {
     const file = event.target.files[0];
